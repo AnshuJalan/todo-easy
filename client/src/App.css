@@ -1,0 +1,352 @@
+/* Body */
+html, body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
+  
+  .intro-component{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  
+    background-image: url('./res/cover.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 0;
+  }
+  
+  .intro-div{
+    position: relative;
+    top: 25%;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  /*
+   * Sidebar
+   */
+  
+   .sidebar {
+    position: sticky !important;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 0; /* Behind the navbar */
+    padding: 0;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+  }
+  
+  .sidebar-sticky {
+    position: -webkit-sticky;
+    position: fixed;
+    top: 48px; /* Height of navbar */
+    height: calc(100vh - 48px);
+    padding-top: .5rem;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    animation: fadeInAnimation ease 1.5s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+  }
+  
+  .sidebar .nav-link {
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .sidebar .nav-link .feather {
+    margin-right: 4px;
+    color: #999;
+  }
+  
+  .sidebar .nav-link.active {
+    color: #007bff;
+  }
+  
+  .sidebar-heading {
+    font-size: 1.0rem;
+    text-transform: uppercase;
+  }
+  
+  .navbar-brand{
+    font-size: 1.05rem !important;
+  }
+  
+  .bg-transparent{
+    background-color: transparent;
+  }
+  
+  .custom-brand{
+    color: #DC3545;
+  }
+  .nav-link:active{
+    color: #DC3545;
+  }
+  
+  .custom-brand:hover{
+    color: #DC3545;
+  }
+  .navbar-nav .dropdown-menu {
+    position: absolute !important;
+}
+  
+  /* Links */
+  
+  .nav-link{
+    cursor: pointer;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+  }
+
+  .main{
+    animation: fadeInAnimation ease 1.5s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+  }
+  
+  
+  /* Input */
+  
+  .google-button{
+    background-color: #ebebeb !important;
+  }
+  
+  .hover-danger{
+    color: #6C757D;
+    text-decoration: none !important;
+  }
+  
+  .hover-danger:hover{
+    color: #DC3545;
+  }
+  
+  .custom-jumbotron{
+    margin: 1.5rem;
+    background-color: #F8F9FA;
+    padding: 15px;
+    border-radius: 7px;
+  }
+  
+  .listInput, .listInput:focus {
+    outline: none !important;
+    background-color: transparent;
+    border: none;
+    font-weight: 600;
+  }
+  
+  .form-control:focus{
+    box-shadow: none !important;
+    border-color: #ced4da!important;
+  }
+  
+  .taskField{
+    outline: none !important;
+    background-color: transparent;
+    border: none;
+  
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    cursor: default;
+  }
+
+  .not-selectable{
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    cursor: default;
+  }
+  
+  /*Custom Checkbox*/
+  
+  .custom-checkbox{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .checkbox{
+    display: none;
+  }
+  
+  .check-label{
+    position: relative;
+    border: 1px rgba(0, 0, 0, 0.384) solid;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    margin: 0px;
+    top: 4px;
+    right: 4px;
+  }
+  
+  .check-label:hover{
+    background-color: rgb(223, 223, 223);
+  }
+  
+  .checkbox:checked + .check-label::before{
+    content: '';
+    background: white;
+    background-color: rgba(220, 53, 70, 1);
+    opacity: 1;
+    outline: none;
+    box-shadow: none;
+    border-radius: 50%;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: -1px;
+    top: -1px;
+  }
+  
+  .checkbox:checked + .check-label::after{
+    content: '\2713\0020';
+      color: white;
+      position: absolute;
+      left: 2px;
+      font-size: 15px;
+      font-weight: bold;
+      top: -2px;
+  }
+  
+  
+  
+  .checked-label::before{
+    content: '';
+    background: white;
+    background-color: rgba(220, 53, 70, 1);
+    opacity: 1;
+    outline: none;
+    box-shadow: none;
+    border-radius: 50%;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: -1px;
+    top: -1px;
+  }
+  
+  .checked-label::after{
+    content: '\2713\0020';
+      color: white;
+      position: absolute;
+      left: 2px;
+      font-size: 15px;
+      font-weight: bold;
+      top: -2px;
+  }
+  
+  input[type="date"]{
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+  }
+  
+  .date-custom{
+    position: absolute;
+    left: 80%;
+    background: #DC3545;
+    font-size: 14px;
+    padding: 3px;
+    border: 0px;
+    border-radius: 6px;
+    width: 15%;
+    color: white;
+    font-weight: 500;
+  }
+
+  .date-custom-2{
+    background: #DC3545;
+    font-size: 14px;
+    padding: 5px;
+    margin-top: 2px;
+    border: 0px;
+    border-radius: 6px;
+    color: white;
+    font-weight: 500;
+  }
+  
+  .date-label{
+    position: absolute;
+    left: 73%;
+    font-weight: 500;
+  }
+  
+  .fa-trash{
+    cursor: pointer !important;
+  }
+
+  /* LOGIN FORM */
+  .form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+  }
+  .form-signin .checkbox {
+    font-weight: 400;
+  }
+  .form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+  }
+  .form-signin .form-control:focus {
+    z-index: 2;
+  }
+  
+  .form-signin input[type="text"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  
+  .form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+  
+  /* Animations */
+  
+  .Toastify__progress-bar--default { background: #DC3545 !important; }
+  .Toastify__toast-body{
+    font-weight: bold !important;
+    color: rgba(0, 0, 0, 0.795);
+  }
+  
+  .fade-in{
+    animation: fadeInAnimation ease 1s;
+  }
+  
+  
+  @keyframes fadeInAnimation { 
+      0% { 
+          opacity: 0; 
+      } 
+      100% { 
+          opacity: 1; 
+      } 
+  } 
