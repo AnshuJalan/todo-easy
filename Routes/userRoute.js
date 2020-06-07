@@ -51,14 +51,18 @@ router.post('/logoutall',auth,async (req,res)=>{
 
 router.delete('/user/:id',auth,async (req,res)=>{
   try {
-    const user = await User.findByIdAndDelete(req.params.id)
-    if(!user){
-      return res.status(404).send({Error:"No User with that user_id"})
-    }
-     res.send(user)
-  } catch (e) {
-    res.status(400).send(e)
+  const user = await User.findByIdAndDelete(req.params.id)
+  const tasks = await Task.deleteMany({owner:user._id})
+  if(!tasks.ok){
+    return res.status(404).send({error:"No task deleted"})
   }
+  if(!user){
+    return res.status(404).send({Error:"No User with that user_id"})
+  }
+   res.send({user:user,count:tasks.deletedCount})
+} catch (e) {
+  res.status(400).send(e)
+}
 });
 
 module.exports=router;
