@@ -44,6 +44,10 @@ class Intro extends Component {
                     </Animated>
                 </div>
 
+                <div className="tag text-center">
+                    <p className="text-muted">&copy; 2020 | Developed By <a href="https://github.com/krishnaflutter">Krishna</a> & <a href="https://github.com/AnshuJalan">Anshu</a> ✌</p>
+                </div>
+
             </div>
         );
     }

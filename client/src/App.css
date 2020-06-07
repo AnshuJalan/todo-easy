@@ -16,11 +16,22 @@ html, body{
     background-size: cover;
     z-index: 0;
   }
-  
+
   .intro-div{
     position: relative;
     top: 25%;
     font-family: 'Roboto', sans-serif;
+  }
+
+  .tag{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+  }
+
+  div.tag a{
+    text-decoration: none;
+    color: #DC3545;
   }
   
   /*
